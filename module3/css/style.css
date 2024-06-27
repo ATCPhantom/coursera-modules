@@ -5,14 +5,13 @@ body{
 	font-family: Oxygen;
 }
 
-/** HEADER **/
+/** NAVBAR **/
 #header-nav{
 	background-color: #f6b319;
 	border-radius: 0;
 	border: 0;
 }
 
-/** NAVBAR **/
 .navbar-brand{
 	margin-bottom: 30px;
 }
@@ -75,23 +74,91 @@ button.navbar-toggler{
 	border-color: #61122f;
 }
 
+/** END NAVBAR **/
+
+/** FOOTER **/
+.panel-footer{
+	margin-top: 30px;
+	padding-top: 35px;
+	padding-bottom: 30px;
+	background-color: #222;
+	border-top: 0;
+}
+#hours, #address{
+	line-height: 27px;
+}
+
+#hours span, #address span{
+	font-size: 1.15em;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+#address p{
+	font-size: 0.8em;
+	font-style: italic;
+	line-height: 1.5;
+}
+
+#testimonials{
+	font-style: italic;
+}
+
+#testimonials p:nth-child(2){
+	margin-top: 25px;
+}
+
+#copyright{
+	margin-top: 20px;
+}
+
+/** END FOOTER **/
+
 #main-content{
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: center;
-	margin: auto;
-}
-
-#home-tiles{
-	background-color: black;
-	margin: auto;
 }
 
 .jumbotron{
+	margin: auto;
+}
+
+.jumbotron img{
 	box-shadow: 0 0 50px #3F0C1F;
 	border: 2px solid #3F0C1F;
-	/*margin-right: 16px;
-	margin-left: -6px;*/
+	background: url('../images/jumbotron_1200.jpg') no-repeat;
+}
+
+.menu-tile, .specials-tile, .map-tile{
+	position: relative;
+	overflow: hidden;
+	box-shadow: 0 0 15px #3F0C1F;
+	border: 2px solid #3F0C1F;
+	background-color: white;
+}
+
+.menu-tile-text, .specials-tile-text, .map-tile-text{
+	position: absolute;
+	top: 92%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: rgba(0, 0, 0, 0.5);
+	font-size: 22px;
+	font-weight: bold;
+	text-transform: uppercase;
+  	color: #fff;
+  	width: 101%;
+}
+
+.menu-tile-text p, .specials-tile-text p, .map-tile-text p{
+	margin: 8px;
+}
+
+.menu-tile:hover, .specials-tile:hover, .map-tile:hover{
+	.menu-tile-text, .specials-tile-text, .map-tile-text{
+		background-color: rgba(0, 0, 0, 0.8);
+	}
 }
 
 /***** Large devices only *****/
@@ -105,7 +172,6 @@ button.navbar-toggler{
 
 	.jumbotron{
 		background: url('../images/jumbotron_1200.jpg') no-repeat;
-		max-width: 1200px;
 	}
 }
 
@@ -136,6 +202,13 @@ button.navbar-toggler{
 	.jumbotron{
 		background: url('../images/jumbotron_992.jpg') no-repeat;
 	}
+	.menu-tile-text, .specials-tile-text, .map-tile-text{
+		font-size: 1.2em;
+	}
+
+	.map-tile iframe{
+		height: 197px;
+	}
 }
 
 /***** Small devices only *****/
@@ -164,6 +237,14 @@ button.navbar-toggler{
 
 	.jumbotron{
 		background: url('../images/jumbotron_768.jpg') no-repeat;
+	}
+
+	.menu-tile-text, .specials-tile-text, .map-tile-text{
+		font-size: 1em;
+	}
+
+	.map-tile{
+		margin-top: 8px;
 	}
 }
 
@@ -194,6 +275,22 @@ button.navbar-toggler{
 	
 	.jumbotron{
 		background: url('../images/jumbotron_768.jpg') no-repeat;
+	}
+
+	.menu-tile-text, .specials-tile-text, .map-tile-text{
+		font-size: 0.85em;
+		top: 95%;
+	}
+	.menu-tile-text p, .specials-tile-text p, .map-tile-text p{
+		margin: 4px;
+	}
+
+	.menu-tile, .specials-tile, .map-tile{
+		width: 360px;
+		margin: 0 auto 8px;
+	}
+	#address, #testimonials{
+		margin-top: 20px;
 	}
 }
 
