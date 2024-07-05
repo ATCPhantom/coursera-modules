@@ -1,0 +1,35 @@
+.navbar{
+	background-color: lightgray;
+}
+#navbarSupportedContent{
+ 	background-color: ghostwhite;
+ 	margin-top: 5px;
+ 	margin-left: -50px;
+ 	margin-right: -50px;
+}
+
+ #navbarSupportedContent li{
+ 	border: 1px solid lightgray;
+ 	margin-bottom: -1px;
+ }
+
+.chicken-tile, .beef-tile, .sushi-tile{
+	border: 2px solid black;
+	margin: 10px 0px 20px 0px;
+}
+
+ .chicken-tile{
+ 	background-color: wheat;
+ }
+ .beef-tile{
+ 	background-color: rosybrown;
+ }
+ .sushi-tile{
+ 	background-color: skyblue;
+ }
+
+ /*@media (max-width 767px){
+ 	.main-content{
+ 		margin: right;
+ 	}
+ }*/

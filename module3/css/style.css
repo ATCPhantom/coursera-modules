@@ -140,15 +140,14 @@ button.navbar-toggler{
 
 .menu-tile-text, .specials-tile-text, .map-tile-text{
 	position: absolute;
-	top: 92%;
-	left: 50%;
-	transform: translate(-50%, -50%);
+	bottom: 0;
+	right: 0;
 	background-color: rgba(0, 0, 0, 0.5);
 	font-size: 22px;
 	font-weight: bold;
 	text-transform: uppercase;
   	color: #fff;
-  	width: 101%;
+  	width: 100%;
 }
 
 .menu-tile-text p, .specials-tile-text p, .map-tile-text p{
@@ -160,9 +159,105 @@ button.navbar-toggler{
 		background-color: rgba(0, 0, 0, 0.8);
 	}
 }
+ /* END HOME PAGE */
 
-/***** Large devices only *****/
-@media	(min-width: 1200px){
+ /* START MENU CATEGORIES */
+ .category-tile{
+ 	position: relative;
+ 	border: 2px solid #3F0C1F;
+ 	overflow: hidden;
+ 	width: 200px;
+ 	height: 200px;
+ 	margin: 0 auto 15px;
+ 	background-color: black;
+ }
+
+ .category-tile span{
+ 	position: absolute;
+ 	bottom: 0;
+ 	right: 0;
+ 	width: 100%;
+ 	text-align: center;
+ 	font-size: 1.2em;
+ 	text-transform: uppercase;
+ 	background-color: rgba(0, 0, 0, 0.5);
+ 	color: #fff;
+ }
+
+ .category-tile img:hover{
+ 	opacity: 0.85;
+}
+
+.menu-categories-text{
+	margin-bottom: 20px;
+}
+ /* END MENU CATEGORIES */
+
+ /* START MENU ITEMS */
+.menu-item-tile{
+	margin-bottom: 25px;
+}
+
+.menu-item-tile hr{
+	width: 80%;
+	margin: 15px auto 0px;
+}
+
+.menu-item-tile .menu-item-price{
+	font-size: 1.1em;
+	text-align: right;
+	margin-top: -15px;
+	margin-right: -12px;
+}
+
+.menu-item-tile .menu-item-price span{
+	font-size: 0.6em;
+}
+
+.menu-item-photo{
+	position: relative;
+	border: 2px solid #3F0C1F;
+	overflow: hidden;
+	padding: 0;
+	margin-right: -15px;
+	magin-left: auto;
+	margin-bottom: 20px;
+	max-width: 250px;
+}
+
+.menu-item-photo div{
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 50px;
+	background-color: #3F0C1F;
+	text-align: center;
+}
+
+.menu-item-description{
+	padding-right: 30px;
+}
+
+h3.menu-item-title{
+	margin-bottom: 10px;
+}
+
+.menu-item-details{
+	font-size: 0.9em;
+	font-style: italic;
+}
+
+@media	(min-width: 1400px){
+	.menu-item-tile .menu-item-price{
+		margin-right: 0px;
+	}
+
+	.menu-categories-text h2:after{
+		content: " - X Extra Large";
+	}	
+}
+/***** Extra Large devices only *****/
+@media	(min-width: 1200px) and (max-width: 1399px){
 	#logo-img{
 		background: url('../images/restaurant-logo_large.png') no-repeat;
 		width: 150px;
@@ -173,9 +268,16 @@ button.navbar-toggler{
 	.jumbotron{
 		background: url('../images/jumbotron_1200.jpg') no-repeat;
 	}
+
+	#hours hr, #address hr, #testimonials hr{
+		display:none;
+	}
+	.menu-categories-text h2:after{
+		content: " - Extra Large";
+	}
 }
 
-/***** Medium devices only *****/
+/***** Large devices only *****/
 @media (min-width: 992px) and (max-width: 1199px){
 	/* Header */
 	#logo-img{
@@ -209,9 +311,17 @@ button.navbar-toggler{
 	.map-tile iframe{
 		height: 197px;
 	}
+
+	#hours hr, #address hr, #testimonials hr{
+		display:none;
+	}
+
+	.menu-categories-text h2:after{
+		content: " - Large";
+	}
 }
 
-/***** Small devices only *****/
+/***** Medium devices only *****/
 @media (min-width: 768px) and (max-width: 991px){
 	#logo-img{
 		background: url('../images/restaurant-logo_medium.png') no-repeat;
@@ -246,10 +356,18 @@ button.navbar-toggler{
 	.map-tile{
 		margin-top: 8px;
 	}
+
+	#hours hr, #address hr, #testimonials hr{
+		display:none;
+	}
+
+	.menu-categories-text h2:after{
+		content: " - Medium";
+	}
 }
 
-/***** Extra small devices only *****/
-@media (max-width: 767px){
+/***** Small devices only *****/
+@media (min-width: 577px) and (max-width: 767px){
 	.navbar-brand{
 		margin-bottom: 0px;
 	}
@@ -279,7 +397,6 @@ button.navbar-toggler{
 
 	.menu-tile-text, .specials-tile-text, .map-tile-text{
 		font-size: 0.85em;
-		top: 95%;
 	}
 	.menu-tile-text p, .specials-tile-text p, .map-tile-text p{
 		margin: 4px;
@@ -289,9 +406,32 @@ button.navbar-toggler{
 		width: 360px;
 		margin: 0 auto 8px;
 	}
+
 	#address, #testimonials{
 		margin-top: 20px;
 	}
+
+	#hours, #address, #testimonials{
+		text-align: center;
+	}
+
+	#copyright-hr{
+		display:none;
+	}
+
+	.menu-categories-text h2:after{
+		content: " - Small";
+	}
 }
 
+@media (max-width: 576px){
+	.menu-item-tile .menu-item-price{
+		text-align: left;
+		margin-bottom: 10px;
+	}
+
+	.menu-categories-text h2:after{
+		content: " - Extra Small";
+	}
+}
 
